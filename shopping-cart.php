@@ -3,6 +3,8 @@ error_reporting(0);
 //Setting session start
 session_start();
 
+$total=0;
+
 //Database connection, replace with your connection string.. Used PDO
 $conn = new PDO("mysql:host=localhost;dbname=tutsplanet", 'root', '');		
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -91,7 +93,9 @@ $products = $stmt->fetchAll();
       <td><?php print $product['qty']?></td>
       <td><a href="shopping-cart.php?action=empty&sku=<?php print $key?>" class="btn btn-info">Delete</a></td>
     </tr>
+    <?php $total = $total+$product['price'];?>
     <?php endforeach;?>
+    <tr><td colspan="5" align="right"><h4>Total:$<?php print $total?></h4></td></tr>
   </table>
   <?php endif;?>
   <nav class="navbar navbar-inverse" style="background:#04B745;">
