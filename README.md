@@ -6,7 +6,7 @@ Simple PHP shopping cart application for beginners.
 [Source](https://wallpapernoon.com/922/shopping-cart-wallpapers)
 
 
-Step #1
+## Step #1
 Run the create-products.sql script and change the connection string in your script to your database.
 
 Read tutorial here
