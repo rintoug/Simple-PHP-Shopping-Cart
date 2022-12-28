@@ -93,7 +93,7 @@ $products = $stmt->fetchAll();
       <td><?php print $product['qty']?></td>
       <td><a href="shopping-cart.php?action=empty&sku=<?php print $key?>" class="btn btn-info">Delete</a></td>
     </tr>
-    <?php $total = $total+$product['price'];?>
+    <?php $total = $total+($product['price']*$product['qty']);?>
     <?php endforeach;?>
     <tr><td colspan="5" align="right"><h4>Total:$<?php print $total?></h4></td></tr>
   </table>
