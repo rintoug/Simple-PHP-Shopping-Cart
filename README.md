@@ -9,4 +9,4 @@ Simple PHP shopping cart application for beginners.
 Run the create-products.sql script and change the connection string in your script to your database.
 
 Read the tutorial here
- http://www.tutsplanet.com/simple-php-shopping-cart/
+ https://tutsplanet.com/simple-php-shopping-cart/
